@@ -1,0 +1,19 @@
+// src/styles/theme.ts
+import { DefaultTheme } from 'styled-components';
+
+export const theme: DefaultTheme = {
+  colors: {
+    background: '#2f1437',
+    text: '#bebcbf',
+    primary: '#441e50',
+    secondary: '#441f4f',
+    accent: '#4a3c50',
+    light: '#FFFFFF',
+  },
+  fonts: {
+    montserrat: "'Montserrat', sans-serif",
+    bold: 700,
+    light: 300,
+  },
+};
+
