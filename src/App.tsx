@@ -67,7 +67,7 @@ function App() {
       </Routes>
 
       <WhatsAppButton
-        href="https://wa.me/5569999999999" // substitua pelo número real da Wine Tech
+        href="https://wa.me/5511985492095" // substitua pelo número real da Wine Tech
         target="_blank"
         rel="noopener noreferrer"
       >

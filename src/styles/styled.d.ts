@@ -10,6 +10,8 @@ declare module 'styled-components' {
       secondary: string;
       accent: string;
       light: string;
+      border: string;  // ✅ Adicionado
+      input: string;   // ✅ Adicionado
     };
     fonts: {
       montserrat: string;

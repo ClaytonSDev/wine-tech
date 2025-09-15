@@ -52,9 +52,11 @@ function Servicos() {
     <Container>
       <h1>Nossos Serviços</h1>
       <ul>
-        <li>Infraestrutura de TI</li>
-        <li>Monitoramento inteligente</li>
-        <li>Consultoria tecnológica</li>
+        <li>Desenvolvimento de sistemas personalizados</li>
+        <li>Infraestrutura de TI e Cloud</li>
+        <li>Consultoria em transformação digital</li>
+        <li>Monitoramento inteligente e automação</li>
+        <li>Integração de dados e segurança da informação</li>
       </ul>
     </Container>
   );

@@ -82,8 +82,12 @@ function Home() {
       <img src={logo} alt="Logo Wine Tech" />
       <h1>Bem-vindo à Wine Tech</h1>
       <p>
-        Fundada em 2015, a Wine Tech nasceu com o propósito de transformar o
-        setor de TI por meio de soluções inteligentes, seguras e escaláveis...
+        Tecnologia que transforma. Soluções que conectam.
+        <br />
+        <br />A Wine Tech é uma empresa de inovação que desenvolve soluções
+        digitais para todos os setores da economia. Atuamos com inteligência,
+        estratégia e propósito para ajudar empresas a evoluírem com eficiência e
+        sustentabilidade.
       </p>
     </Container>
   );

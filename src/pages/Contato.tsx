@@ -12,7 +12,85 @@ const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
 
-  // ...restante do código
+  h1 {
+    font-size: 2.2rem;
+    color: ${({ theme }) => theme.colors.light};
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+
+    input,
+    textarea {
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid ${({ theme }) => theme.colors.border || "#ccc"};
+      font-size: 1rem;
+      background-color: ${({ theme }) => theme.colors.input || "#fff"};
+      color: ${({ theme }) => theme.colors.text};
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.light};
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.secondary};
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    form {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    input,
+    textarea,
+    button {
+      font-size: 0.95rem;
+    }
+  }
 `;
 
 function Contato() {
@@ -20,9 +98,11 @@ function Contato() {
     <Container>
       <h1>Fale Conosco</h1>
       <p>
-        contato@winetech.com.br
+        Vamos conversar sobre o futuro da sua empresa?
         <br />
-        (69) 99999-9999
+        <strong>Email:</strong> contato@winetech.com.br
+        <br />
+        <strong>Telefone:</strong> (13) 99180-2871
       </p>
       <form>
         <input type="text" placeholder="Seu nome" required />
