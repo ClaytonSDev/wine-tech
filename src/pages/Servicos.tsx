@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 80px 1.5rem;
-  background-color: ${({ theme }) =>
-    theme.colors.background}; // cor 3 - fundo escuro
-  color: ${({ theme }) => theme.colors.text}; // cor 5 - texto claro
+  padding: 80px 1.5rem 40px;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
   min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 
   h1 {
-    color: ${({ theme }) => theme.colors.ligth}; // cor 1 - destaque no título
+    color: ${({ theme }) => theme.colors.light};
     font-size: 2rem;
     margin-bottom: 1rem;
   }
@@ -18,9 +19,8 @@ const Container = styled.div`
     padding: 0;
 
     li {
-      background-color: ${({ theme }) =>
-        theme.colors.accent}; // cor 4 - destaque nos itens
-      color: ${({ theme }) => theme.colors.light}; // cor 5 - texto claro
+      background-color: ${({ theme }) => theme.colors.accent};
+      color: ${({ theme }) => theme.colors.light};
       padding: 0.75rem 1rem;
       margin-bottom: 0.75rem;
       border-radius: 6px;
@@ -28,9 +28,21 @@ const Container = styled.div`
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: ${({ theme }) =>
-          theme.colors.secondary}; // cor 2 - hover elegante
+        background-color: ${({ theme }) => theme.colors.secondary};
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 70px;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      padding: 0.6rem 0.8rem;
     }
   }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bgImage from "../assets/background-sobre.png"; // imagem que você enviou
+import bgImage from "../assets/background-sobre.png";
 
 const SobreContainer = styled.div`
   background: url(${bgImage}) no-repeat center center;
@@ -19,13 +19,14 @@ const SobreContainer = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6); // overlay escuro
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
   }
 
   > div {
-    padding: 100px 2rem 60px; // conteúdo interno com espaçamento controlado
+    padding: 80px 2rem 60px;
     max-width: 900px;
+    box-sizing: border-box;
   }
 
   h1 {
@@ -68,6 +69,10 @@ const SobreContainer = styled.div`
   }
 
   @media (max-width: 768px) {
+    > div {
+      padding: 70px 1.5rem 40px;
+    }
+
     h1 {
       font-size: 2rem;
     }
@@ -84,31 +89,34 @@ const SobreContainer = styled.div`
       font-size: 1rem;
     }
   }
+
+  @media (max-width: 480px) {
+    > div {
+      padding: 60px 1rem 30px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p,
+    ul li {
+      font-size: 0.95rem;
+    }
+  }
 `;
 
 function Sobre() {
   return (
     <SobreContainer>
       <div>
-      <h1>Sobre</h1>
-      <h2>A Tradição da Qualidade, a Precisão da Tecnologia</h2>
-      <p>
-        Fundada com o compromisso de unir tradição e inovação, a Wine Tech
-        oferece soluções tecnológicas com excelência e precisão. Nossa atuação é
-        guiada por valores sólidos e uma missão clara: transformar o setor de TI
-        com inteligência e responsabilidade.
-      </p>
-      <h2>Nossa Missão</h2>
-      <p>
-        Impulsionar o progresso humano por meio da tecnologia, entregando
-        soluções seguras, escaláveis e personalizadas para cada cliente.
-      </p>
-      <h2>Nossos Valores</h2>
-      <ul>
-        <li>Excelência Técnica</li>
-        <li>Compromisso com o Cliente</li>
-        <li>Inovação e Adaptabilidade</li>
-      </ul>
+        <h1>Sobre</h1>
+        <h2>A Tradição da Qualidade, a Precisão da Tecnologia</h2>
+        <p>Fundada com o compromisso de unir tradição e inovação...</p>
       </div>
     </SobreContainer>
   );

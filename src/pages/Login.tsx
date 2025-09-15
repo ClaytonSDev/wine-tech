@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 80px 1.5rem;
+  padding: 80px 1.5rem 40px;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   min-height: 100vh;
@@ -10,6 +10,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 
   h2 {
     color: ${({ theme }) => theme.colors.light};
@@ -66,6 +68,8 @@ const Container = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding-top: 70px;
+
     h2 {
       font-size: 1.6rem;
     }
