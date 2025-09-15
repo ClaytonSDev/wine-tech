@@ -3,9 +3,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   padding: 80px 1.5rem;
-  background-color: ${({ theme }) =>
-    theme.colors.background}; // cor 3 - fundo escuro
-  color: ${({ theme }) => theme.colors.text}; // cor 5 - texto claro
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,14 +12,13 @@ const Container = styled.div`
   justify-content: center;
 
   h2 {
-    color: ${({ theme }) => theme.colors.light}; // cor 1 - destaque no título
+    color: ${({ theme }) => theme.colors.light};
     margin-bottom: 1rem;
     font-size: 2rem;
   }
 
   form {
-    background-color: ${({ theme }) =>
-      theme.colors.accent}; // cor 4 - fundo do formulário
+    background-color: ${({ theme }) => theme.colors.accent};
     padding: 2rem;
     border-radius: 8px;
     width: 100%;
@@ -36,6 +34,8 @@ const Container = styled.div`
       border: none;
       border-radius: 4px;
       font-size: 1rem;
+      background-color: ${({ theme }) => theme.colors.background};
+      color: ${({ theme }) => theme.colors.text};
     }
 
     button {
@@ -64,6 +64,44 @@ const Container = styled.div`
       color: ${({ theme }) => theme.colors.accent};
     }
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    form {
+      padding: 1.5rem;
+    }
+
+    input,
+    button {
+      font-size: 0.95rem;
+    }
+
+    a {
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    form {
+      padding: 1rem;
+    }
+
+    input,
+    button {
+      font-size: 0.9rem;
+    }
+
+    a {
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 const Login = () => {
@@ -71,8 +109,8 @@ const Login = () => {
     <Container>
       <h2>Área do Cliente</h2>
       <form>
-        <input type="email" placeholder="Seu e-mail" />
-        <input type="password" placeholder="Sua senha" />
+        <input type="email" placeholder="Seu e-mail" required />
+        <input type="password" placeholder="Sua senha" required />
         <button type="submit">Entrar</button>
       </form>
       <Link to="/recuperar-senha">Esqueceu a senha?</Link>
