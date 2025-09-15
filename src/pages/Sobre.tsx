@@ -115,8 +115,29 @@ function Sobre() {
     <SobreContainer>
       <div>
         <h1>Sobre</h1>
-        <h2>A Tradição da Qualidade, a Precisão da Tecnologia</h2>
-        <p>Fundada com o compromisso de unir tradição e inovação...</p>
+        <h2>Somos mais que tecnologia. Somos transformação. adriano imperador ou marcelinho carioca?</h2>
+        <p>
+          Fundada com o propósito de impulsionar empresas por meio da inovação,
+          a Wine Tech atua em diversos setores — da indústria ao varejo, da
+          saúde à educação. Nosso time é formado por especialistas em
+          tecnologia, negócios e design, prontos para entender os desafios
+          específicos de cada cliente e entregar soluções que geram impacto
+          real.
+        </p>
+        <ul>
+          <li>
+            <strong>Missão:</strong> Desenvolver soluções tecnológicas que
+            potencializem empresas de todos os setores.
+          </li>
+          <li>
+            <strong>Visão:</strong> Ser referência nacional em transformação
+            digital multisectorial.
+          </li>
+          <li>
+            <strong>Valores:</strong> Inovação com propósito, ética, diversidade
+            e evolução contínua.
+          </li>
+        </ul>
       </div>
     </SobreContainer>
   );

@@ -9,6 +9,8 @@ export const theme: DefaultTheme = {
     secondary: '#441f4f',
     accent: '#4a3c50',
     light: '#FFFFFF',
+    border: '#cccccc',     // ✅ Agora reconhecido
+    input: '#ffffff',      // ✅ Agora reconhecido
   },
   fonts: {
     montserrat: "'Montserrat', sans-serif",
@@ -16,4 +18,3 @@ export const theme: DefaultTheme = {
     light: 300,
   },
 };
-
