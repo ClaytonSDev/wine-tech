@@ -36,7 +36,7 @@ const Brand = styled.div`
 
   h2 {
     color: ${({ theme }) => theme.colors.light};
-    font-family: "Playfair Display", serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
     margin: 0;
