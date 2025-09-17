@@ -1,6 +1,7 @@
 // src/styles/styled.d.ts
 import 'styled-components';
 
+// Tipagem do tema
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
@@ -10,8 +11,8 @@ declare module 'styled-components' {
       secondary: string;
       accent: string;
       light: string;
-      border: string;  // ✅ Adicionado
-      input: string;   // ✅ Adicionado
+      border: string;
+      input: string;
     };
     fonts: {
       montserrat: string;

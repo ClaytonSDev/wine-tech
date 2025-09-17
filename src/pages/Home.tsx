@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import logo from "../assets/logo1.png";
+import destaque1 from "../assets/destaque1.png";
 import bgImage from "../assets/background-tech.png";
 
+// Estilos
 const Container = styled.div`
+  position: relative;
   padding: 80px 1.5rem 40px;
   background: url(${bgImage}) no-repeat center center;
   background-size: cover;
@@ -11,84 +14,135 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   width: 100%;
   box-sizing: border-box;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); // Overlay escuro
+    z-index: -1;
+  }
+`;
+
+const Hero = styled.div`
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 60px;
+  animation: fadeIn 1.2s ease-in;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   img {
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 
   h1 {
-    color: ${({ theme }) => theme.colors.light};
     font-size: 2.2rem;
+    color: ${({ theme }) => theme.colors.light};
     margin-bottom: 1rem;
   }
 
   p {
     font-size: 1.15rem;
     line-height: 1.7;
-    max-width: 720px;
     color: ${({ theme }) => theme.colors.light};
-  }
-
-  @media (max-width: 768px) {
-    padding-top: 70px;
-
-    img {
-      width: 180px;
-      height: 180px;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-    }
-
-    p {
-      font-size: 1rem;
-      padding: 0 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    img {
-      width: 140px;
-      height: 140px;
-    }
-
-    h1 {
-      font-size: 1.3rem;
-    }
-
-    p {
-      font-size: 0.95rem;
-    }
   }
 `;
 
+const Section = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+  max-width: 1000px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    flex: 1;
+    color: ${({ theme }) => theme.colors.light};
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+
+  .image {
+  flex: 1;
+  img {
+    width: 100%;
+    max-width: 320px; // 🔽 Reduzido de 400px
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+`;
+
+const CTA = styled.div`
+  margin-top: 60px;
+  font-size: 1.4rem;
+  color: ${({ theme }) => theme.colors.light};
+  font-weight: bold;
+  text-align: center;
+`;
+
+// Componente principal
 function Home() {
   return (
     <Container>
-      <img src={logo} alt="Logo Wine Tech" />
-      <h1>Bem-vindo à Wine Tech</h1>
-      <p>
-        Tecnologia que transforma. Soluções que conectam.
-        <br />
-        <br />A Wine Tech é uma empresa de inovação que desenvolve soluções
-        digitais para todos os setores da economia. Atuamos com inteligência,
-        estratégia e propósito para ajudar empresas a evoluírem com eficiência e
-        sustentabilidade.
-      </p>
+      <Hero>
+        <img src={logo} alt="Logo Wine Tech" />
+        <h1>Bem-vindo à Wine Tech</h1>
+        <p>
+          Wine Tech: Inovação e Versatilidade em Soluções Digitais.<br /><br />
+          Desenvolvimento de softwares, sistemas e sites que impulsionam o seu negócio, em qualquer segmento.
+        </p>
+      </Hero>
+
+      <Section>
+        <div className="text">
+          <h2>Por que a Wine Tech?</h2>
+          <p>
+            Da sua ideia à realidade digital.<br /><br />
+            Na Wine Tech, transformamos sua visão em uma solução tecnológica robusta e intuitiva. Somos especialistas em desenvolver sistemas, sites e softwares que não apenas atendem, mas superam as suas expectativas.
+          </p>
+        </div>
+        <div className="image">
+          <img src={destaque1} alt="Imagem Por que a Wine Tech" />
+        </div>
+      </Section>
+
+      <CTA>
+        Vamos conversar sobre como podemos transformar sua ideia em realidade?
+      </CTA>
     </Container>
   );
 }
