@@ -2,8 +2,8 @@ import styled from "styled-components";
 import logo from "../assets/logo1.png";
 import destaque1 from "../assets/destaque1.png";
 import bgImage from "../assets/background-tech.png";
+import { Link } from "react-router-dom"; // ✅ Para navegação interna
 
-// Estilos
 const Container = styled.div`
   position: relative;
   padding: 80px 1.5rem 40px;
@@ -22,7 +22,7 @@ const Container = styled.div`
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5); // Overlay escuro
+    background: rgba(0, 0, 0, 0.5);
     z-index: -1;
   }
 `;
@@ -75,11 +75,6 @@ const Section = styled.section`
   max-width: 1000px;
   flex-wrap: wrap;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .text {
     flex: 1;
     color: ${({ theme }) => theme.colors.light};
@@ -96,14 +91,120 @@ const Section = styled.section`
   }
 
   .image {
-  flex: 1;
-  img {
-    width: 100%;
-    max-width: 320px; // 🔽 Reduzido de 400px
+    flex: 1;
+    img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .image {
+      order: -1;
+      img {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .text {
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+`;
+
+const Highlights = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin: 60px 0;
+  max-width: 1000px;
+
+  .card {
+    background-color: ${({ theme }) => theme.colors.primary};
+    padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    flex: 1;
+    color: ${({ theme }) => theme.colors.light};
+    text-align: left;
+    animation: fadeInUp 0.8s ease forwards;
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      background-color: ${({ theme }) => theme.colors.accent};
+      color: ${({ theme }) => theme.colors.light};
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.secondary};
+      }
+    }
   }
-}
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+
+      img {
+        margin: 1rem auto 0;
+      }
+
+      a {
+        margin: 1rem auto 0;
+      }
+    }
+  }
 `;
 
 const CTA = styled.div`
@@ -128,6 +229,9 @@ function Home() {
       </Hero>
 
       <Section>
+        <div className="image">
+          <img src={destaque1} alt="Imagem Por que a Wine Tech" />
+        </div>
         <div className="text">
           <h2>Por que a Wine Tech?</h2>
           <p>
@@ -135,13 +239,39 @@ function Home() {
             Na Wine Tech, transformamos sua visão em uma solução tecnológica robusta e intuitiva. Somos especialistas em desenvolver sistemas, sites e softwares que não apenas atendem, mas superam as suas expectativas.
           </p>
         </div>
-        <div className="image">
-          <img src={destaque1} alt="Imagem Por que a Wine Tech" />
-        </div>
       </Section>
 
+      <Highlights>
+        <div className="card">
+          <h3>Soluções que Geram Resultados</h3>
+          <p>
+            Nossa meta não é apenas entregar um software, mas garantir um retorno claro sobre o seu investimento e impulsionar o crescimento do seu negócio.
+          </p>
+          <img src={destaque1} alt="Soluções que Geram Resultados" />
+          <Link to="/contato">Fale Conosco</Link>
+        </div>
+
+        <div className="card">
+          <h3>Expertise Multissetorial</h3>
+          <p>
+            Trabalhamos em diversos mercados — saúde, logística, varejo, educação e muitos outros. Não importa o seu nicho, temos o conhecimento para desenvolver a solução perfeita para você.
+          </p>
+          <img src={destaque1} alt="Expertise Multissetorial" />
+          <Link to="/contato">Fale Conosco</Link>
+        </div>
+
+        <div className="card">
+          <h3>Parceria de Longo Prazo</h3>
+          <p>
+            Somos seus parceiros estratégicos, não apenas fornecedores. Trabalhamos lado a lado com você para garantir que cada etapa do projeto seja um sucesso.
+          </p>
+          <img src={destaque1} alt="Parceria de Longo Prazo" />
+          <Link to="/contato">Fale Conosco</Link>
+        </div>
+      </Highlights>
+
       <CTA>
-        Vamos conversar sobre como podemos transformar sua ideia em realidade?
+        Seu próximo projeto de sucesso começa aqui. Vamos inovar juntos?
       </CTA>
     </Container>
   );
