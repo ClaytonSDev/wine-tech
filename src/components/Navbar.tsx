@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo1.png";
 
@@ -94,6 +94,7 @@ const NavLinks = styled.div<{ $isOpen: boolean }>`
     padding: 0.4rem 0.6rem;
     border-radius: 6px;
     transition: background 0.3s ease;
+    cursor: pointer;
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.accent};
@@ -104,6 +105,12 @@ const NavLinks = styled.div<{ $isOpen: boolean }>`
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setIsOpen(false); // Fecha o menu após navegar
+  };
 
   return (
     <Nav>
@@ -113,11 +120,11 @@ const Navbar = () => {
       </Brand>
       <ToggleButton onClick={() => setIsOpen(!isOpen)}>☰</ToggleButton>
       <NavLinks $isOpen={isOpen}>
-        <Link to="/">Home</Link>
-        <Link to="/sobre">Sobre</Link>
-        <Link to="/servicos">Serviços</Link>
-        <Link to="/contato">Contato</Link>
-        <Link to="/login">Área do Cliente</Link>
+        <a onClick={() => handleNavigation("/")}>Home</a>
+        <a onClick={() => handleNavigation("/sobre")}>Sobre</a>
+        <a onClick={() => handleNavigation("/servicos")}>Serviços</a>
+        <a onClick={() => handleNavigation("/contato")}>Contato</a>
+        <a onClick={() => handleNavigation("/login")}>Área do Cliente</a>
       </NavLinks>
     </Nav>
   );
