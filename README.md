@@ -1,69 +1,170 @@
-# React + TypeScript + Vite
+# 📦 Wine Tech Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Wine Tech** é uma plataforma tecnológica multivertente desenvolvida com foco em inovação, escalabilidade e experiência do usuário. Este repositório contém o frontend da aplicação, construído com **React**, **TypeScript**, **Vite** e **Styled Components**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React 19** – Biblioteca principal para construção da interface
+- **TypeScript** – Tipagem estática para maior segurança e produtividade
+- **Vite** – Bundler moderno e rápido para desenvolvimento e build
+- **Styled Components** – Estilização com CSS-in-JS
+- **React Router DOM** – Navegação entre páginas
+- **Axios** – Requisições HTTP
+- **Tailwind (opcional)** – Utilitários de estilo
+- **ESLint + Prettier** – Padronização e qualidade de código
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
+
+## 📁 Estrutura de Pastas
+
+```plaintext
+src/
+├── assets/           # Imagens e ícones
+├── components/       # Componentes reutilizáveis (Navbar, Footer, etc.)
+├── contexts/         # Contextos globais (ex: autenticação)
+├── features/         # Funcionalidades específicas por vertical
+├── hooks/            # Custom hooks
+├── pages/            # Páginas principais (Home, Login, Contato, etc.)
+├── services/         # Integração com APIs (axios)
+├── styles/           # Estilos globais e tema
+├── types/            # Tipos e interfaces TypeScript
+├── App.tsx           # Componente raiz
+└── main.tsx          # Ponto de entrada da aplicação
+```
+
+---
+
+## 🧪 Como rodar o projeto localmente
+
+### Pré-requisitos
+
+- Node.js 18+
+- NPM ou Yarn
+- Git
+
+### Instalação
+
+```bash
+git clone https://github.com/SEU_USUARIO/wine-tech.git
+cd wine-tech/frontend
+npm install
+```
+
+### Execução
+
+```bash
+npm run dev
+```
+
+A aplicação estará disponível em `http://localhost:5173`.
+
+---
+
+## 🔐 Autenticação
+
+O projeto utiliza um sistema de autenticação baseado em **JWT**, integrado com o backend Java (Spring Boot). O estado do usuário é gerenciado via `UserContext`, permitindo exibir conteúdo personalizado e proteger rotas.
+
+---
+
+## 📡 Integração com Backend
+
+O frontend se comunica com o backend via `axios`, utilizando o endpoint:
+
+```
+http://localhost:8080/api/auth/login
+```
+
+> ⚠️ Certifique-se de que o backend esteja rodando e que o CORS esteja habilitado.
+
+---
+
+## 🧠 Funcionalidades em destaque
+
+- Menu mobile inteligente com fechamento automático
+- Página Home com conteúdo dinâmico para usuários logados
+- Tela de login integrada ao contexto global
+- Estrutura escalável para múltiplas verticais (EduTech, AgroTech, etc.)
+- Estilização responsiva e animada
+
+---
+
+## 📌 Próximos passos
+
+- Integração com PostgreSQL via backend Java
+- Criação de dashboard personalizado por usuário
+- Proteção de rotas privadas
+- Sistema de notificações e histórico de atividades
+
+---
+
+## ⚙️ Configuração Técnica Avançada
+
+Este projeto utiliza uma configuração mínima para rodar React com Vite e HMR, além de regras de ESLint otimizadas.
+
+### Plugins oficiais disponíveis:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) usa [Babel](https://babeljs.io/) para Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) usa [SWC](https://swc.rs/) para Fast Refresh
+
+---
+
+### 🔍 Expanding the ESLint configuration
+
+Para aplicações em produção, recomenda-se ativar regras de lint com verificação de tipos:
 
 ```js
 export default tseslint.config([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
       ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
       ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
-])
+]);
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Você também pode instalar:
+
+- [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
+- [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
 
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from "eslint-plugin-react-x";
+import reactDom from "eslint-plugin-react-dom";
 
 export default tseslint.config([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
+      reactX.configs["recommended-typescript"],
       reactDom.configs.recommended,
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
-])
+]);
 ```
+
+---
+
+## 🤝 Contribuição
+
+Sinta-se à vontade para abrir issues, enviar pull requests ou sugerir melhorias. Este projeto está em constante evolução.
+
+---
