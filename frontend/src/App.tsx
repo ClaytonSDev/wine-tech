@@ -58,11 +58,11 @@ function App() {
     <AppContainer>
       <Routes>
         <Route element={<LayoutWrapper />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/servicos" element={<Servicos />} />
-          <Route path="/contato" element={<Contato />} />
-          <Route path="/login" element={<Login />} />
+          <Route index element={<Home />} />
+          <Route path="sobre" element={<Sobre />} />
+          <Route path="servicos" element={<Servicos />} />
+          <Route path="contato" element={<Contato />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
 
@@ -70,8 +70,9 @@ function App() {
         href="https://wa.me/5511985492095"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Fale conosco no WhatsApp"
       >
-        <img src={whatsappIcon} alt="Fale conosco no WhatsApp" />
+        <img src={whatsappIcon} alt="Ícone do WhatsApp" />
       </WhatsAppButton>
     </AppContainer>
   );
