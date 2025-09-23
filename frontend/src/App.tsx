@@ -9,7 +9,6 @@ import Login from "./pages/Login";
 import LayoutWrapper from "./components/LayoutWrapper";
 import whatsappIcon from "./assets-webp/whatsapp-icon.webp";
 
-
 const AppContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
