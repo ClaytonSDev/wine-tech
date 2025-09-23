@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import bgImage from "../assets/background-sobre.png";
+import bgImage from "../assets-webp/background-sobre.webp";
+
 
 const SobreContainer = styled.div`
   background: url(${bgImage}) no-repeat center center;

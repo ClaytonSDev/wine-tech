@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import logo from "../assets/logo1.png";
-import destaque1 from "../assets/destaque1.png";
-import bgImage from "../assets/background-tech.png";
+import logo from "../assets-webp/logo.webp";
+import destaque1 from "../assets-webp/fedback.webp";
+import bgImage from "../assets-webp/background-tech.webp";
+import equipe from "../assets-webp/cardresultados.webp";
+import multissetor from "../assets-webp/cardexpertise.webp";
+import parceria from "../assets-webp/cardlongoprazo.webp";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -273,7 +276,7 @@ const Home = () => {
             retorno claro sobre o seu investimento e impulsionar o crescimento
             do seu negócio.
           </p>
-          <img src={destaque1} alt="Soluções que Geram Resultados" />
+          <img src={equipe} alt="Soluções que Geram Resultados" />
           <Link to="/contato">Fale Conosco</Link>
         </div>
 
@@ -284,7 +287,7 @@ const Home = () => {
             educação e muitos outros. Não importa o seu nicho, temos o
             conhecimento para desenvolver a solução perfeita para você.
           </p>
-          <img src={destaque1} alt="Expertise Multissetorial" />
+          <img src={multissetor} alt="Expertise Multissetorial" />
           <Link to="/contato">Fale Conosco</Link>
         </div>
 
@@ -295,7 +298,7 @@ const Home = () => {
             Trabalhamos lado a lado com você para garantir que cada etapa do
             projeto seja um sucesso.
           </p>
-          <img src={destaque1} alt="Parceria de Longo Prazo" />
+          <img src={parceria} alt="Parceria de Longo Prazo" />
           <Link to="/contato">Fale Conosco</Link>
         </div>
       </Highlights>

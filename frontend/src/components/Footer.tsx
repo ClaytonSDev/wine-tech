@@ -1,8 +1,7 @@
-// src/components/Footer.tsx
 import styled from "styled-components";
-import linkedinIcon from "../assets/linkedin.png";
-import instagramIcon from "../assets/instagram.png";
-import facebookIcon from "../assets/facebook.png";
+import linkedinIcon from "../assets-webp/linkedin.webp";
+import instagramIcon from "../assets-webp/instagram.webp";
+import facebookIcon from "../assets-webp/facebook.webp";
 
 const FooterContainer = styled.footer`
   margin-top: 60px;
