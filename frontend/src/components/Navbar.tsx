@@ -1,8 +1,7 @@
-// src/components/Navbar.tsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/logo1.png";
+import logo from "../assets-webp/logo.webp";
 
 const Nav = styled.nav`
   background-color: ${({ theme }) => theme.colors.primary};

@@ -7,8 +7,8 @@ import Servicos from "./pages/Servicos";
 import Contato from "./pages/Contato";
 import Login from "./pages/Login";
 import LayoutWrapper from "./components/LayoutWrapper";
+import whatsappIcon from "./assets-webp/whatsapp-icon.webp";
 
-import whatsappIcon from "./assets/whatsapp-icon.png";
 
 const AppContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.background};

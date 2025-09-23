@@ -1,6 +1,12 @@
 import { useState } from "react";
+import servico1 from "../assets-webp/devsistema.webp";
+import servico2 from "../assets-webp/ecomerce.webp";
+import servico3 from "../assets-webp/infraestrutura.webp";
+import servico4 from "../assets-webp/consultoria.webp";
+import servico5 from "../assets-webp/monitoramento.webp";
+import servico6 from "../assets-webp/seguranca.webp";
+
 import styled from "styled-components";
-import destaque1 from "../assets/destaque1.png";
 
 const Container = styled.div`
   padding: 80px 1.5rem 40px;
@@ -81,9 +87,9 @@ const Container = styled.div`
 
     img {
       width: 100%;
-      max-width: 600px;
+      max-width: 300px;
       border-radius: 8px;
-      margin-top: 1rem;
+      margin: 1rem auto; /* Centraliza a imagem horizontalmente */
       display: block;
     }
   }
@@ -128,6 +134,7 @@ Criamos sistemas robustos para atender às suas necessidades específicas, seja 
 Nossa equipe está pronta para entender os seus desafios e desenvolver uma tecnologia que seja a base para o sucesso do seu negócio.
 
 Quer saber como uma solução sob medida pode alavancar a sua empresa? Entre em contato e vamos conversar sobre o seu projeto!`,
+    imagem: servico1,
   },
   {
     titulo: "Desenvolvimento de Sites e E-commerce",
@@ -158,6 +165,7 @@ Transformamos sua ideia de loja online em uma realidade lucrativa, com foco em:
 • Análise de Dados: Você terá acesso a relatórios detalhados para entender o comportamento dos seus clientes, quais produtos vendem mais e como otimizar suas estratégias de vendas.
 
 Nossa equipe está pronta para transformar sua presença digital em uma máquina de vendas. Que tipo de projeto você tem em mente?`,
+    imagem: servico2,
   },
   {
     titulo: "Infraestrutura de TI e Cloud",
@@ -181,6 +189,7 @@ Oferecemos uma gama completa de serviços para criar e gerenciar uma infraestrut
 • Suporte Técnico Especializado: Sua equipe terá acesso a um suporte técnico proativo para resolver problemas rapidamente e evitar que pequenos imprevistos se tornem grandes dores de cabeça.
 
 Uma infraestrutura de TI bem planejada é a chave para a inovação e o crescimento. Está pronto para levar a sua infraestrutura para o próximo nível?`,
+    imagem: servico3,
   },
   {
     titulo: "Consultoria em Transformação Digital",
@@ -202,6 +211,7 @@ Trabalhamos lado a lado com sua equipe para entender seus desafios e metas. Noss
 • Análise de Dados: Usamos a análise de dados para monitorar o progresso, identificar tendências e tomar decisões mais inteligentes, garantindo que a sua transformação digital continue gerando valor a longo prazo.
 
 A transformação digital é uma jornada contínua, e estamos aqui para garantir que ela seja bem-sucedida. Pronto para iniciar a sua?`,
+    imagem: servico4,
   },
   {
     titulo: "Monitoramento Inteligente e Automação",
@@ -221,6 +231,7 @@ Nossos serviços de monitoramento e automação vão muito além de simples aler
 • Otimização Contínua: O sistema não apenas monitora, ele também sugere melhorias e otimizações. Com a automação, ele pode até mesmo ajustar configurações automaticamente para garantir a máxima performance.
 
 Com a nossa solução, sua empresa ganha agilidade, confiabilidade e a capacidade de operar em um novo nível de eficiência. Está pronto para otimizar a sua operação?`,
+    imagem: servico5,
   },
   {
     titulo: "Integração de Dados e Segurança da Informação",
@@ -247,6 +258,7 @@ A segurança não é um luxo, mas uma necessidade. Nossas soluções de seguran�
 • Backup e Recuperação de Desastres: Criamos planos de backup automatizados e testados para que, em caso de falha de sistema, ataque cibernético ou desastre natural, seus dados possam ser recuperados rapidamente, minimizando o tempo de inatividade e os prejuízos.
 
 Com a nossa ajuda, seus dados estarão organizados, acessíveis e, mais importante, totalmente seguros.`,
+    imagem: servico6,
   },
 ];
 
@@ -278,7 +290,7 @@ const Servicos = () => {
             {selecionado === index && (
               <div className="detalhes">
                 <p>{servico.descricao}</p>
-                <img src={destaque1} alt="Imagem ilustrativa do serviço" />
+                <img src={servico.imagem} alt={`Imagem ilustrativa do serviço de ${servico.titulo}`} />
               </div>
             )}
           </div>
