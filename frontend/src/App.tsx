@@ -7,6 +7,10 @@ import Contato from "./pages/Contato";
 import Login from "./pages/Login";
 import LayoutWrapper from "./components/LayoutWrapper";
 import whatsappIcon from "./assets-webp/whatsapp-icon.webp";
+import linkedinIcon from "../assets-webp/linkedin-icon.webp";
+import facebook from "../assets-webp/facebook-icon.webp";
+
+
 
 
 const AppContainer = styled.div`
