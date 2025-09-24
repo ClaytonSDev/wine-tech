@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import linkedinIcon from "../assets-webp/linkedin-icon.webp";
-import instagramIcon from "../assets-webp/instagram.webp";
+import instagramIcon from "../assets-webp/instagram-icon.webp";
 import facebookIcon from "../assets-webp/facebook-icon.webp";
 
 const FooterContainer = styled.footer`
