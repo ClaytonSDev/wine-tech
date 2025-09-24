@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Servicos from "./pages/Servicos";
@@ -8,6 +7,7 @@ import Contato from "./pages/Contato";
 import Login from "./pages/Login";
 import LayoutWrapper from "./components/LayoutWrapper";
 import whatsappIcon from "./assets-webp/whatsapp-icon.webp";
+
 
 const AppContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
