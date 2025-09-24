@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import linkedinIcon from "../assets-webp/linkedin-icon.webp";
-import instagramIcon from "../assets-webp/instagram-icon.webp";
-import facebookIcon from "../assets-webp/facebook-icon.webp";
+import facebookIcon from "../../assets-webp/facebook-icon.webp";
+import linkedinIcon from "../../assets-webp/linkedin-icon.webp";
+import instagramIcon from "../../assets-webp/instagram-icon.webp";
 
 const FooterContainer = styled.footer`
   margin-top: 60px;
