@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import facebookIcon from "../../assets-webp/facebook-icon.webp";
-import linkedinIcon from "../../assets-webp/linkedin-icon.webp";
-import instagramIcon from "../../assets-webp/instagram-icon.webp";
+import facebookIcon from '@assets/facebook-icon.webp';
+import linkedinIcon from '@assets/linkedin-icon.webp';
+import instagramIcon from '@assets/instagram-icon.webp';
 
 const FooterContainer = styled.footer`
-  margin-top: 60px;
+  margin-top: clamp(40px, 6vw, 60px);
   padding: 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary};
   text-align: center;
@@ -47,33 +47,37 @@ const SocialLinks = styled.div`
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>
-        © {new Date().getFullYear()} Wine Tech. Todos os direitos reservados.
-      </p>
-      <SocialLinks>
-        <a
-          href="https://www.linkedin.com/company/winetech"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={linkedinIcon} alt="LinkedIn" />
-        </a>
-        <a
-          href="https://www.instagram.com/company/winetech"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={instagramIcon} alt="Instagram" />
-        </a>
-        <a
-          href="https://www.facebook.com/company/winetech"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={facebookIcon} alt="Facebook" />
-        </a>
-      </SocialLinks>
-    </FooterContainer>
+  <p>
+    © {new Date().getFullYear()} Wine Tech. Todos os direitos reservados.
+  </p>
+  <SocialLinks>
+    <a
+      href="https://www.linkedin.com/company/winetech"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn da Wine Tech"
+    >
+      <img src={linkedinIcon} alt="LinkedIn" />
+    </a>
+    <a
+      href="https://www.instagram.com/company/winetech"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram da Wine Tech"
+    >
+      <img src={instagramIcon} alt="Instagram" />
+    </a>
+    <a
+      href="https://www.facebook.com/company/winetech"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook da Wine Tech"
+    >
+      <img src={facebookIcon} alt="Facebook" />
+    </a>
+  </SocialLinks>
+</FooterContainer>
+
   );
 };
 
