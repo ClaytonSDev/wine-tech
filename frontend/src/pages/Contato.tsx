@@ -1,4 +1,9 @@
+// src/pages/Contato.tsx
+import { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Container = styled.div`
   padding: 80px 1.5rem 40px;
@@ -105,6 +110,31 @@ const Container = styled.div`
 `;
 
 const Contato = () => {
+  const [form, setForm] = useState({
+    nome: "",
+    email: "",
+    mensagem: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:8080/api/contato", form);
+      toast.success("Mensagem enviada com sucesso!");
+      setForm({ nome: "", email: "", mensagem: "" });
+    } catch (error: any) {
+      if (error.response?.data) {
+        toast.error(error.response.data);
+      } else {
+        toast.error("Erro ao enviar mensagem. Tente novamente.");
+      }
+    }
+  };
+
   return (
     <Container>
       <h1>Fale Conosco</h1>
@@ -115,12 +145,33 @@ const Contato = () => {
         <br />
         <strong>Telefone:</strong> (11) 95489-2095
       </p>
-      <form>
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
-        <textarea placeholder="Sua mensagem" required />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="nome"
+          placeholder="Seu nome"
+          value={form.nome}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Seu e-mail"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="mensagem"
+          placeholder="Sua mensagem"
+          value={form.mensagem}
+          onChange={handleChange}
+          required
+        />
         <button type="submit">Enviar</button>
       </form>
+      <ToastContainer position="top-right" autoClose={4000} />
     </Container>
   );
 };
