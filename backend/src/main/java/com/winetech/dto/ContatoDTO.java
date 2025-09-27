@@ -15,13 +15,22 @@ public class ContatoDTO {
     @NotBlank(message = "Mensagem é obrigatória")
     private String mensagem;
 
-    // Getters e setters
+    public ContatoDTO() {
+        // Construtor padrão necessário para deserialização
+    }
+
+    public ContatoDTO(String nome, String email, String mensagem) {
+        this.nome = nome;
+        this.email = email;
+        this.mensagem = mensagem;
+    }
+
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nome = nome != null ? nome.trim() : null;
     }
 
     public String getEmail() {
@@ -29,7 +38,7 @@ public class ContatoDTO {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email != null ? email.trim() : null;
     }
 
     public String getMensagem() {
@@ -37,6 +46,6 @@ public class ContatoDTO {
     }
 
     public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
+        this.mensagem = mensagem != null ? mensagem.trim() : null;
     }
 }
