@@ -1,34 +1,71 @@
-HELP.md
+# 🌱 Backend: Java + Spring Boot
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
 
-### STS ###
+# Maven wrapper
+.mvn/
+mvnw
+mvnw.cmd
+.mvn/wrapper/maven-wrapper.jar
+
+# 🔥 Frontend: React + TypeScript + Vite
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# 🧪 Test coverage
+jacoco.exec
+
+# ⚙️ Configs e arquivos sensíveis
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+senha email app.txt
+
+# 🧠 IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# 🛠️ STS (Spring Tool Suite)
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# 🧱 NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 build/
+
+# Evitar ignorar builds dentro de src/
 !**/src/main/**/build/
 !**/src/test/**/build/
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-### VS Code ###
-.vscode/
-senha email app.txt
+# 🍎 macOS
+.DS_Store
+
+# 🪟 Windows
+Thumbs.db
