@@ -22,10 +22,12 @@ public class EnvLoader {
                 logger.info("Variável carregada: {}", entry.getKey());
             });
 
+            // ✅ Teste: imprimir valor da senha carregada
+            logger.info("Senha do banco carregada: {}", System.getProperty("DB_PASSWORD"));
+            logger.info("JWT carregado: {}", System.getProperty("JWT_SECRET"));
+
         } catch (Exception e) {
             logger.error("Erro ao carregar .env", e);
         }
-
-        logger.info("JWT carregado: {}", System.getProperty("JWT_SECRET"));
     }
 }

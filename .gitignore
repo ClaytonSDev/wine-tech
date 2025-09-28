@@ -1,42 +1,47 @@
 # Diretórios de IDEs
 .idea/
 .vscode/
-*.iml
-
-# Arquivos de sistema operacional
-.DS_Store
-Thumbs.db
-
-# Diretórios de build
+# ========================
+# BACKEND - Java / Maven
+# ========================
 target/
-build/
-out/
-
-# Arquivos compilados Java
 *.class
 *.jar
 *.war
 *.ear
-
-# Logs
 *.log
+*.db
+*.env
+*.iml
+*.ipr
+*.iws
+.idea/
+senha email app.txt
 
-# Diretórios de testes e cobertura
-test-output/
-coverage/
-
-# Node.js / Frontend
+# ========================
+# FRONTEND - Node.js / Vite / React
+# ========================
 node_modules/
 dist/
-.env
+build/
+.vite/
+.vscode/
 .env.local
-.env.*.local
+.env.development
+.env.production
+*.lock
 
-# Arquivos sensíveis específicos do projeto
-backend/.env
-backend/senha email app.txt
+# ========================
+# SISTEMA OPERACIONAL
+# ========================
+.DS_Store
+Thumbs.db
 
-# Cache e arquivos temporários
+# ========================
+# TEMPORÁRIOS / BACKUP
+# ========================
+*~
+*.bak
 *.tmp
-*.swp
-*.swo
+~$*
+*.docx~

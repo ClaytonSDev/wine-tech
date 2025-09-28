@@ -11,6 +11,10 @@ public class SecureController {
 
     @GetMapping("/hello")
     public ResponseEntity<String> hello() {
+<<<<<<< HEAD
+        return ResponseEntity.ok("Acesso autorizado! 🍷");
+=======
         return ResponseEntity.ok("Acesso autorizado!");
+>>>>>>> dev-back
     }
 }

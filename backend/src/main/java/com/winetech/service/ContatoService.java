@@ -37,8 +37,10 @@ public class ContatoService {
     public List<Contato> buscarPorNome(String nome) {
         return contatoRepository.findByNomeContainingIgnoreCase(nome);
     }
-HEAD
+HEAD:backend/src/main/java/com/winetech/service/ContatoService.java
 }
-=======
+
 }
-dev-front
+
+
+05c512e (Reestrutura backend, adiciona API de contato e configura .env):src/main/java/com/winetech/service/ContatoService.java

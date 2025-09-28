@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+HEAD
+backend/.env
+backend/senha email app.txt
+=======
+>>>>>>> dev-back
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
@@ -18,7 +25,10 @@ target/
 *.iws
 *.iml
 *.ipr
+<<<<<<< HEAD
+=======
 .env
+>>>>>>> dev-back
 
 ### NetBeans ###
 /nbproject/private/
@@ -33,3 +43,10 @@ build/
 ### VS Code ###
 .vscode/
 senha email app.txt
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:backend/.gitignore
+========
+05c512e (Reestrutura backend, adiciona API de contato e configura .env)
+>>>>>>>> dev-back:.gitignore
+>>>>>>> dev-back

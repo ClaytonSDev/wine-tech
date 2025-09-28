@@ -11,11 +11,19 @@
 	<packaging>jar</packaging>
 
 	<name>wine-tech-backend</name>
+<<<<<<< HEAD
+	<description>Backend da Wine Tech com Spring Boot, JWT e PostgreSQL</description>
+=======
 	<description>Backend da Wine Tech com Spring Boot, JWT, PostgreSQL e envio de email</description>
+>>>>>>> dev-back
 
 	<properties>
 		<java.version>17</java.version>
 		<spring.boot.version>3.1.2</spring.boot.version>
+<<<<<<< HEAD
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+=======
+>>>>>>> dev-back
 	</properties>
 
 	<dependencyManagement>
@@ -36,14 +44,27 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+<<<<<<< HEAD
+
+=======
+>>>>>>> dev-back
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+<<<<<<< HEAD
+
+=======
+>>>>>>> dev-back
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+<<<<<<< HEAD
+
+		<!-- Spring Boot Mail -->
+=======
+>>>>>>> dev-back
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
@@ -81,11 +102,14 @@
 			<artifactId>jakarta.validation-api</artifactId>
 			<version>3.0.2</version>
 		</dependency>
+<<<<<<< HEAD
+=======
 		<dependency>
 			<groupId>jakarta.annotation</groupId>
 			<artifactId>jakarta.annotation-api</artifactId>
 			<version>2.1.1</version>
 		</dependency>
+>>>>>>> dev-back
 
 		<!-- Jackson -->
 		<dependency>
@@ -115,6 +139,8 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.2.0</version>
 		</dependency>
+<<<<<<< HEAD
+=======
 
 		<!-- Dotenv para variáveis de ambiente -->
 		<dependency>
@@ -122,10 +148,13 @@
 			<artifactId>dotenv-java</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+>>>>>>> dev-back
 	</dependencies>
 
 	<build>
 		<plugins>
+<<<<<<< HEAD
+=======
 			<!-- Plugin para compilar com Java 17 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -138,6 +167,7 @@
 			</plugin>
 
 			<!-- Plugin para rodar o projeto com mvn spring-boot:run -->
+>>>>>>> dev-back
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -146,4 +176,8 @@
 		</plugins>
 	</build>
 
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> dev-back
