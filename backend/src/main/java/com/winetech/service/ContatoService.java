@@ -37,4 +37,8 @@ public class ContatoService {
     public List<Contato> buscarPorNome(String nome) {
         return contatoRepository.findByNomeContainingIgnoreCase(nome);
     }
+HEAD
 }
+=======
+}
+dev-front
