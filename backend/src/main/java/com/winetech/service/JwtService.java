@@ -13,8 +13,7 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    @Value("${jwt.secret}")
-    private String secret;
+    private final String secret = System.getProperty("JWT_SECRET");
 
     private final long EXPIRATION_TIME = 1000 * 60 * 60 * 24;
 
