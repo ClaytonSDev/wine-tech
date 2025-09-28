@@ -1,76 +1,42 @@
-HEAD
-# 🌱 Backend: Java + Spring Boot
+# Diretórios de IDEs
+.idea/
+.vscode/
+*.iml
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Diretórios de build
 target/
+build/
+out/
+
+# Arquivos compilados Java
 *.class
 *.jar
 *.war
 *.ear
+
+# Logs
 *.log
-*.tmp
-*.bak
-*.swp
-*.swo
 
-# Maven wrapper
-.mvn/
-mvnw
-mvnw.cmd
-.mvn/wrapper/maven-wrapper.jar
+# Diretórios de testes e cobertura
+test-output/
+coverage/
 
-# 🔥 Frontend: React + TypeScript + Vite
+# Node.js / Frontend
 node_modules/
 dist/
-build/
-.vite/
-*.tsbuildinfo
-
-# 🧪 Test coverage
-jacoco.exec
-
-# ⚙️ Configs e arquivos sensíveis
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
-senha email app.txt
+.env.*.local
 
-# 🧠 IDEs
-.idea/
-*.iml
-*.ipr
-*.iws
-.vscode/
-
-# 🛠️ STS (Spring Tool Suite)
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings/
-.springBeans
-.sts4-cache
-
-# 🧱 NetBeans
-nbproject/private/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-build/
-
-# Evitar ignorar builds dentro de src/
-!**/src/main/**/build/
-!**/src/test/**/build/
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-# 🍎 macOS
-.DS_Store
-
-# 🪟 Windows
-Thumbs.db
-=======
+# Arquivos sensíveis específicos do projeto
 backend/.env
 backend/senha email app.txt
-dev-back
+
+# Cache e arquivos temporários
+*.tmp
+*.swp
+*.swo
