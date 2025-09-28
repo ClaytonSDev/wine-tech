@@ -1,3 +1,4 @@
+HEAD
 # 🌱 Backend: Java + Spring Boot
 target/
 *.class
@@ -69,3 +70,7 @@ build/
 
 # 🪟 Windows
 Thumbs.db
+=======
+backend/.env
+backend/senha email app.txt
+dev-back
