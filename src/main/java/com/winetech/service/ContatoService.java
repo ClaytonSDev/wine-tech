@@ -14,6 +14,7 @@ public class ContatoService {
     private final ContatoRepository contatoRepository;
 
     @Autowired
+
     public ContatoService(ContatoRepository contatoRepository) {
         this.contatoRepository = contatoRepository;
     }
@@ -37,10 +38,6 @@ public class ContatoService {
     public List<Contato> buscarPorNome(String nome) {
         return contatoRepository.findByNomeContainingIgnoreCase(nome);
     }
-HEAD:backend/src/main/java/com/winetech/service/ContatoService.java
-}
 
 }
 
-
-05c512e (Reestrutura backend, adiciona API de contato e configura .env):src/main/java/com/winetech/service/ContatoService.java

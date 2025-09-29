@@ -15,7 +15,6 @@ public class ContatoDTO {
     @NotBlank(message = "Mensagem é obrigatória")
     private String mensagem;
 
-HEAD:backend/src/main/java/com/winetech/dto/ContatoDTO.java
     public ContatoDTO() {
         // Construtor padrão necessário para deserialização
     }
@@ -26,7 +25,6 @@ HEAD:backend/src/main/java/com/winetech/dto/ContatoDTO.java
         this.mensagem = mensagem;
     }
 
-05c512e (Reestrutura backend, adiciona API de contato e configura .env):src/main/java/com/winetech/dto/ContatoDTO.java
     public String getNome() {
         return nome;
     }
